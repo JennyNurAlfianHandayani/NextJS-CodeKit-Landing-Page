@@ -1,103 +1,232 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { Briefcase, Shield, Users, TrendingUp, CheckCircle, Star } from "lucide-react";
+import { Header } from "@/components/header";
+import { HeroSection } from "@/components/hero-section";
+import { ServicesOverview } from "@/components/services-overview";
+import { CompanyFormation } from "@/components/company-formation";
+import { AuditTax } from "@/components/audit-tax";
+import { InvestmentBanking } from "@/components/investment-banking";
+import { CapitalMarkets } from "@/components/capital-markets";
+import { WhyChooseUs } from "@/components/why-choose-us";
+import { ContactSection } from "@/components/contact-section";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 border-gray-200/20">
+        <Header />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <main>
+        <div className="pt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <HeroSection />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
           >
-            Read our docs
-          </a>
+            <ServicesOverview />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <CompanyFormation />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <AuditTax />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <InvestmentBanking />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <CapitalMarkets />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <WhyChooseUs />
+          </motion.div>
+
+          {/* Custom Cards Section with Fade Left/Right Animation */}
+          <motion.section 
+            className="py-16 bg-gray-50"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div 
+                className="text-center mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Our Core Strengths
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Delivering excellence across multiple financial services with proven expertise
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    icon: Briefcase,
+                    title: "Business Excellence",
+                    description: "Strategic consulting and business development solutions tailored for your growth.",
+                    color: "#D7B459"
+                  },
+                  {
+                    icon: Shield,
+                    title: "Risk Management",
+                    description: "Comprehensive risk assessment and mitigation strategies for sustainable business operations.",
+                    color: "#D7B459"
+                  },
+                  {
+                    icon: Users,
+                    title: "Client Partnership",
+                    description: "Building long‑term relationships through trust, transparency, and exceptional service delivery.",
+                    color: "#D7B459"
+                  },
+                  {
+                    icon: TrendingUp,
+                    title: "Market Leadership",
+                    description: "Industry‑leading insights and innovative solutions that drive competitive advantage.",
+                    color: "#D7B459"
+                  },
+                  {
+                    icon: CheckCircle,
+                    title: "Quality Assurance",
+                    description: "Rigorous quality control processes ensuring accuracy and compliance in all deliverables.",
+                    color: "#D7B459"
+                  },
+                  {
+                    icon: Star,
+                    title: "Premium Service",
+                    description: "White‑glove service approach with dedicated support throughout your business journey.",
+                    color: "#D7B459"
+                  }
+                ].map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    className="bg-white rounded-lg p-8 shadow-sm border hover:shadow-md transition-shadow duration-300"
+                    initial={{ 
+                      opacity: 0, 
+                      x: index % 2 === 0 ? -60 : 60 
+                    }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{
+                      duration: 0.8,
+                      delay: index * 0.1,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                    whileHover={{
+                      scale: 1.02,
+                      transition: { duration: 0.2 }
+                    }}
+                  >
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                         style={{ backgroundColor: `${feature.color}15` }}>
+                      <feature.icon 
+                        className="h-7 w-7" 
+                        style={{ color: feature.color }}
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
+            <ContactSection />
+          </motion.div>
+
+          <Footer />
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
