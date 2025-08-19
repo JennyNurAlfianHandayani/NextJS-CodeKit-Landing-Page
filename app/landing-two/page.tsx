@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, Shield, Users, TrendingUp, CheckCircle, Star } from "lucide-react";
-import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
-import { ServicesOverview } from "@/components/services-overview";
-import { CompanyFormation } from "@/components/company-formation";
-import { AuditTax } from "@/components/audit-tax";
-import { InvestmentBanking } from "@/components/investment-banking";
-import { CapitalMarkets } from "@/components/capital-markets";
-import { WhyChooseUs } from "@/components/why-choose-us";
-import { ContactSection } from "@/components/contact-section";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/landing-two/header";
+import { HeroSection } from "@/components/landing-two/hero-section";
+import { ServicesOverview } from "@/components/landing-two/services-overview";
+import { CompanyFormation } from "@/components/landing-two/company-formation";
+import { AuditTax } from "@/components/landing-two/audit-tax";
+import { InvestmentBanking } from "@/components/landing-two/investment-banking";
+import { CapitalMarkets } from "@/components/landing-two/capital-markets";
+import { WhyChooseUs } from "@/components/landing-two/why-choose-us";
+import { ContactSection } from "@/components/landing-two/contact-section";
+import { Footer } from "@/components/landing-two/footer";
 
 export default function LandingTwo() {
   return (

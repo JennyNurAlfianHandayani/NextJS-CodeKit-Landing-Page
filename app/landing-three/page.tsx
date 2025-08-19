@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, Shield, Users, TrendingUp, CheckCircle, Star } from "lucide-react";
-import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
-import { ServicesOverview } from "@/components/services-overview";
-import { CompanyFormation } from "@/components/company-formation";
-import { AuditTax } from "@/components/audit-tax";
-import { InvestmentBanking } from "@/components/investment-banking";
-import { CapitalMarkets } from "@/components/capital-markets";
-import { WhyChooseUs } from "@/components/why-choose-us";
-import { ContactSection } from "@/components/contact-section";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/landing-three/header";
+import { HeroSection } from "@/components/landing-three/hero-section";
+import { ServicesOverview } from "@/components/landing-three/services-overview";
+import { CompanyFormation } from "@/components/landing-three/company-formation";
+import { AuditTax } from "@/components/landing-three/audit-tax";
+import { InvestmentBanking } from "@/components/landing-three/investment-banking";
+import { CapitalMarkets } from "@/components/landing-three/capital-markets";
+import { WhyChooseUs } from "@/components/landing-three/why-choose-us";
+import { ContactSection } from "@/components/landing-three/contact-section";
+import { Footer } from "@/components/landing-three/footer";
 
 export default function LandingThree() {
   return (
