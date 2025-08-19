@@ -1,7 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Shield, Users, TrendingUp, CheckCircle, Star } from "lucide-react";
+import {
+  Briefcase,
+  Shield,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  Star,
+} from "lucide-react";
 import { Header } from "@/components/landing-three/header";
 import { HeroSection } from "@/components/landing-three/hero-section";
 import { ServicesOverview } from "@/components/landing-three/services-overview";
@@ -106,7 +113,7 @@ export default function LandingThree() {
           </motion.div>
 
           {/* Custom Cards Section with Fade Left/Right Animation */}
-          <motion.section 
+          <motion.section
             className="py-16 bg-gray-50"
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +124,7 @@ export default function LandingThree() {
             }}
           >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <motion.div 
+              <motion.div
                 className="text-center mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +138,8 @@ export default function LandingThree() {
                   Our Core Strengths
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Delivering excellence across multiple financial services with proven expertise
+                  Delivering excellence across multiple financial services with
+                  proven expertise
                 </p>
               </motion.div>
 
@@ -140,46 +148,52 @@ export default function LandingThree() {
                   {
                     icon: Briefcase,
                     title: "Business Excellence",
-                    description: "Strategic consulting and business development solutions tailored for your growth.",
-                    color: "#D7B459"
+                    description:
+                      "Strategic consulting and business development solutions tailored for your growth.",
+                    color: "#D7B459",
                   },
                   {
                     icon: Shield,
                     title: "Risk Management",
-                    description: "Comprehensive risk assessment and mitigation strategies for sustainable business operations.",
-                    color: "#D7B459"
+                    description:
+                      "Comprehensive risk assessment and mitigation strategies for sustainable business operations.",
+                    color: "#D7B459",
                   },
                   {
                     icon: Users,
                     title: "Client Partnership",
-                    description: "Building long‑term relationships through trust, transparency, and exceptional service delivery.",
-                    color: "#D7B459"
+                    description:
+                      "Building long‑term relationships through trust, transparency, and exceptional service delivery.",
+                    color: "#D7B459",
                   },
                   {
                     icon: TrendingUp,
                     title: "Market Leadership",
-                    description: "Industry‑leading insights and innovative solutions that drive competitive advantage.",
-                    color: "#D7B459"
+                    description:
+                      "Industry‑leading insights and innovative solutions that drive competitive advantage.",
+                    color: "#D7B459",
                   },
                   {
                     icon: CheckCircle,
                     title: "Quality Assurance",
-                    description: "Rigorous quality control processes ensuring accuracy and compliance in all deliverables.",
-                    color: "#D7B459"
+                    description:
+                      "Rigorous quality control processes ensuring accuracy and compliance in all deliverables.",
+                    color: "#D7B459",
                   },
                   {
                     icon: Star,
                     title: "Premium Service",
-                    description: "White‑glove service approach with dedicated support throughout your business journey.",
-                    color: "#D7B459"
-                  }
+                    description:
+                      "White‑glove service approach with dedicated support throughout your business journey.",
+                    color: "#D7B459",
+                  },
                 ].map((feature, index) => (
                   <motion.div
                     key={feature.title}
                     className="bg-white rounded-lg p-8 shadow-sm border hover:shadow-md transition-shadow duration-300"
-                    initial={{ 
-                      opacity: 0, 
-                      x: index % 2 === 0 ? -60 : 60 
+                    initial={{
+                      opacity: 0,
+                      x: index % 2 === 0 ? -60 : 60,
                     }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
@@ -190,13 +204,15 @@ export default function LandingThree() {
                     }}
                     whileHover={{
                       scale: 1.02,
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                   >
-                    <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
-                         style={{ backgroundColor: `${feature.color}15` }}>
-                      <feature.icon 
-                        className="h-7 w-7" 
+                    <div
+                      className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                      style={{ backgroundColor: `${feature.color}15` }}
+                    >
+                      <feature.icon
+                        className="h-7 w-7"
                         style={{ color: feature.color }}
                       />
                     </div>

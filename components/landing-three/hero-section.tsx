@@ -1,25 +1,42 @@
-import { ArrowRight, Globe, TrendingUp, Shield } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight, Globe, TrendingUp, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 md:py-32">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 md:py-32 overflow-hidden">
+      {/* Background GIF - Simple approach */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/source.gif"
+          alt="Business Animation"
+          className="w-full h-full object-cover opacity-95"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white/50"></div>
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Your Gateway to <span className="text-[#D7B459]">Global Business</span> Success
+            Your Gateway to{" "}
+            <span className="text-[#D7B459]">Global Business</span> Success
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-            Strategic Business Advisory | Audit & Tax Compliance | Investment Banking Solutions
+            Strategic Business Advisory | Audit & Tax Compliance | Investment
+            Banking Solutions
           </p>
           <p className="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
-            A boutique consultancy headquartered in Dubai, UAE, with a truly global footprint. We specialize in guiding
-            entrepreneurs, fast-growing SMEs, and large enterprises with end-to-end business advisory, tax consultancy,
-            and strategic financial solutions.
+            A boutique consultancy headquartered in Dubai, UAE, with a truly
+            global footprint. We specialize in guiding entrepreneurs,
+            fast-growing SMEs, and large enterprises with end-to-end business
+            advisory, tax consultancy, and strategic financial solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-[#D7B459] hover:bg-[#D7B459]/90 text-white px-8 py-3">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-[#D7B459] bg-[#D7B459] hover:bg-white text-white hover:text-[#D7B459] px-8 py-3"
+            >
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -38,25 +55,35 @@ export function HeroSection() {
                 <Globe className="h-8 w-8 text-[#D7B459]" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Global Reach</h3>
-              <p className="text-gray-600 text-sm">International expertise with local market insights</p>
+              <p className="text-gray-600 text-sm">
+                International expertise with local market insights
+              </p>
             </div>
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-[#D7B459]/10 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="h-8 w-8 text-[#D7B459]" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Growth Focused</h3>
-              <p className="text-gray-600 text-sm">From startup to IPO - we scale with you</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Growth Focused
+              </h3>
+              <p className="text-gray-600 text-sm">
+                From startup to IPO - we scale with you
+              </p>
             </div>
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-[#D7B459]/10 rounded-full flex items-center justify-center mb-4">
                 <Shield className="h-8 w-8 text-[#D7B459]" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Compliance First</h3>
-              <p className="text-gray-600 text-sm">Regulatory expertise and risk mitigation</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Compliance First
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Regulatory expertise and risk mitigation
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

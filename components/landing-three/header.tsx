@@ -5,21 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetTitle,
-} from "@/components/ui/sheet";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Careers", href: "/careers" },
-    { name: "Terms & FAQ", href: "/terms" },
+    { name: "Services", href: "#services" },
+    { name: "Company Formation", href: "#company-formation" },
+    { name: "Audit & Tax", href: "#audit-tax" },
+    { name: "Investment Banking", href: "#investment-banking" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -48,23 +45,29 @@ export function Header() {
           ))}
         </nav>
 
+        <div className="hidden md:flex items-center space-x-4">
+          <Button
+            variant="outline"
+            className="border-[#D7B459] text-[#D7B459] hover:bg-[#D7B459] hover:text-white bg-transparent"
+          >
+            Get Quote
+          </Button>
+          <Button
+            variant="outline"
+            className="border-[#D7B459] bg-[#D7B459] hover:bg-white text-white hover:text-[#D7B459]"
+          >
+            Contact Us
+          </Button>
+        </div>
+
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Open navigation menu"
-            >
+            <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px] px-4">
-            {/* Add hidden title for accessibility */}
-            <VisuallyHidden>
-              <SheetTitle>Navigation Menu</SheetTitle>
-            </VisuallyHidden>
-
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <div className="flex flex-col space-y-4 mt-8">
               {navItems.map((item) => (
                 <Link
@@ -76,6 +79,20 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
+              <div className="flex flex-col space-y-2 pt-4">
+                <Button
+                  variant="outline"
+                  className="border-[#D7B459] text-[#D7B459] hover:bg-[#D7B459] hover:text-white bg-transparent"
+                >
+                  Get Quote
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-[#D7B459] bg-[#D7B459] hover:bg-white text-white hover:text-[#D7B459]"
+                >
+                  Contact Us
+                </Button>
+              </div>
             </div>
           </SheetContent>
         </Sheet>
