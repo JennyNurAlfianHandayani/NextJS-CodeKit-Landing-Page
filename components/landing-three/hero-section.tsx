@@ -9,7 +9,7 @@ export function HeroSection() {
         <img
           src="/source.gif"
           alt="Business Animation"
-          className="w-full h-full object-cover opacity-95"
+          className="w-full h-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white/50"></div>
       </div>
